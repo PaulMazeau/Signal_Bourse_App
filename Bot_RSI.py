@@ -1,11 +1,11 @@
 import yfinance as yf
 import ta
-import time
 import threading
 import requests
 import os
 from dotenv import load_dotenv
-import schedule
+
+load_dotenv()  # Assurez-vous d'appeler cette fonction pour charger les variables d'environnement
 
 TELEGRAM_TOKEN = os.getenv('TELEGRAM_TOKEN')
 CHAT_ID = os.getenv('CHAT_ID')
@@ -35,17 +35,9 @@ def monitor_rsi(ticker_symbols, threshold_low=30, threshold_high=60):
         else:
             print(f'{ticker_symbol}: Attente... RSI actuel: {rsi}')
 
-def daily_task():
+if __name__ == '__main__':
     ticker_symbols = ['AAPL', 'GOOGL', 'MSFT', 'AMZN']  # Ajoutez autant de symboles que vous le souhaitez
     for ticker in ticker_symbols:
         thread = threading.Thread(target=monitor_rsi, args=([ticker],))
         thread.start()
-
-if __name__ == '__main__':
-    # Planifiez la tâche pour qu'elle s'exécute tous les jours à 8h du matin
-    schedule.every().day.at("20:45").do(daily_task)
-    
-    # Boucle infinie pour vérifier et exécuter les tâches planifiées
-    while True:
-        schedule.run_pending()
-        time.sleep(1)
+        thread.join()  # Attendez que le thread se termine avant de passer au suivant
