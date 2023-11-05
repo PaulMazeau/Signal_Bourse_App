@@ -43,7 +43,7 @@ def daily_task():
 
 if __name__ == '__main__':
     # Planifiez la tâche pour qu'elle s'exécute tous les jours à 8h du matin
-    schedule.every().day.at("19:45").do(daily_task)
+    schedule.every().day.at("20:45").do(daily_task)
     
     # Boucle infinie pour vérifier et exécuter les tâches planifiées
     while True:
