@@ -5,6 +5,7 @@ import threading
 import requests
 import os
 from dotenv import load_dotenv
+import schedule
 
 TELEGRAM_TOKEN = os.getenv('TELEGRAM_TOKEN')
 CHAT_ID = os.getenv('CHAT_ID')
@@ -21,23 +22,30 @@ def get_rsi(ticker_symbol, interval='1d', period=14):
     return round(rsi.iloc[-1], 1)
 
 def monitor_rsi(ticker_symbols, threshold_low=30, threshold_high=60):
-    while True:
-        for ticker_symbol in ticker_symbols:
-            rsi = get_rsi(ticker_symbol)
-            if rsi < threshold_low:
-                message = f'{ticker_symbol}: Achat, RSI = {rsi}'
-                print(message)
-                send_telegram_message(CHAT_ID, TELEGRAM_TOKEN, message)
-            elif rsi > threshold_high:
-                message = f'{ticker_symbol}: Vente, RSI = {rsi}'
-                print(message)
-                send_telegram_message(CHAT_ID, TELEGRAM_TOKEN, message)
-            else:
-                print(f'{ticker_symbol}: Attente... RSI actuel: {rsi}')
-        time.sleep(60)
+    for ticker_symbol in ticker_symbols:
+        rsi = get_rsi(ticker_symbol)
+        if rsi < threshold_low:
+            message = f'{ticker_symbol}: Achat, RSI = {rsi}'
+            print(message)
+            send_telegram_message(CHAT_ID, TELEGRAM_TOKEN, message)
+        elif rsi > threshold_high:
+            message = f'{ticker_symbol}: Vente, RSI = {rsi}'
+            print(message)
+            send_telegram_message(CHAT_ID, TELEGRAM_TOKEN, message)
+        else:
+            print(f'{ticker_symbol}: Attente... RSI actuel: {rsi}')
 
-if __name__ == '__main__':
+def daily_task():
     ticker_symbols = ['AAPL', 'GOOGL', 'MSFT', 'AMZN']  # Ajoutez autant de symboles que vous le souhaitez
     for ticker in ticker_symbols:
         thread = threading.Thread(target=monitor_rsi, args=([ticker],))
         thread.start()
+
+if __name__ == '__main__':
+    # Planifiez la tâche pour qu'elle s'exécute tous les jours à 8h du matin
+    schedule.every().day.at("08:00").do(daily_task)
+    
+    # Boucle infinie pour vérifier et exécuter les tâches planifiées
+    while True:
+        schedule.run_pending()
+        time.sleep(1)
