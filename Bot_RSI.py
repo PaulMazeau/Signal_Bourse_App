@@ -21,7 +21,7 @@ def get_rsi(ticker_symbol, interval='1d', period=14):
     rsi = ta.momentum.RSIIndicator(stock_data['Close'], window=period).rsi()
     return round(rsi.iloc[-1], 1)
 
-def monitor_rsi(ticker_symbols, threshold_low=30, threshold_high=60):
+def monitor_rsi(ticker_symbols, threshold_low=30, threshold_high=70):
     for ticker_symbol in ticker_symbols:
         rsi = get_rsi(ticker_symbol)
         if rsi < threshold_low:
