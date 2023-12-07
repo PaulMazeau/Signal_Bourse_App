@@ -1,3 +1,4 @@
+##Result backtest RSI
 Stop Loss: 0.05, Take Profit: 0.05, Total Return: 4.327812324663767, Average Return: 0.6182589035233953, Max Drawdown: 13.530904189031073, Average Volatility: 0.053713236377268214
 Stop Loss: 0.05, Take Profit: 0.1, Total Return: 5.0607233010821835, Average Return: 0.7229604715831691, Max Drawdown: 5.0843270123354865, Average Volatility: 0.07818158678438267
 Stop Loss: 0.05, Take Profit: 0.15, Total Return: 6.3492623479064445, Average Return: 0.9070374782723493, Max Drawdown: 2.676403520233578, Average Volatility: 0.09784657078401215
@@ -10,3 +11,18 @@ Stop Loss: 0.15, Take Profit: 0.05, Total Return: 4.18632175843871, Average Retu
 Stop Loss: 0.15, Take Profit: 0.1, Total Return: 4.482272703495863, Average Return: 0.6403246719279805, Max Drawdown: 2.3354830307554737, Average Volatility: 0.10570885272893536
 Stop Loss: 0.15, Take Profit: 0.15, Total Return: 5.38419732419211, Average Return: 0.7691710463131586, Max Drawdown: 2.3354830307554737, Average Volatility: 0.12976051710501615
 Stop Loss: 0.15, Take Profit: 0.2, Total Return: 5.8626780234117355, Average Return: 0.8375254319159622, Max Drawdown: 2.3354830307554737, Average Volatility: 0.13759335099223208
+
+
+##Result backtest RSI+MACD
+Stop Loss: 0.05, Take Profit: 0.05, Total Return: 0.18163977808523502, Average Return: 0.025948539726462144, Max Drawdown: 0.4934126093231392, Average Volatility: 0.006724241961928513
+Stop Loss: 0.05, Take Profit: 0.1, Total Return: 0.32106028816531307, Average Return: 0.04586575545218758, Max Drawdown: 0.3831855093987701, Average Volatility: 0.01509027688725524
+Stop Loss: 0.05, Take Profit: 0.15, Total Return: 0.39653293715285565, Average Return: 0.05664756245040795, Max Drawdown: 0.3831855093987701, Average Volatility: 0.01557083275602505
+Stop Loss: 0.05, Take Profit: 0.2, Total Return: 0.553154996125564, Average Return: 0.079022142303652, Max Drawdown: 0.26200675371000004, Average Volatility: 0.019669576040087115
+Stop Loss: 0.1, Take Profit: 0.05, Total Return: 0.22542138995234595, Average Return: 0.032203055707477994, Max Drawdown: 0, Average Volatility: 0.0008906967046048581
+Stop Loss: 0.1, Take Profit: 0.1, Total Return: 0.3873348705805518, Average Return: 0.055333552940078835, Max Drawdown: 0, Average Volatility: 0.0018047885152188334
+Stop Loss: 0.1, Take Profit: 0.15, Total Return: 0.3735468697292287, Average Return: 0.053363838532746954, Max Drawdown: 0, Average Volatility: 0.0070244183726971
+Stop Loss: 0.1, Take Profit: 0.2, Total Return: 0.4834605154804237, Average Return: 0.06906578792577481, Max Drawdown: 0, Average Volatility: 0.011861317387286522
+Stop Loss: 0.15, Take Profit: 0.05, Total Return: 0.22542138995234595, Average Return: 0.032203055707477994, Max Drawdown: 0, Average Volatility: 0.0008906967046048581
+Stop Loss: 0.15, Take Profit: 0.1, Total Return: 0.3873348705805518, Average Return: 0.055333552940078835, Max Drawdown: 0, Average Volatility: 0.0018047885152188334
+Stop Loss: 0.15, Take Profit: 0.15, Total Return: 0.3735468697292287, Average Return: 0.053363838532746954, Max Drawdown: 0, Average Volatility: 0.0070244183726971
+Stop Loss: 0.15, Take Profit: 0.2, Total Return: 0.4834605154804237, Average Return: 0.06906578792577481, Max Drawdown: 0, Average Volatility: 0.011861317387286522

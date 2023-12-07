@@ -2,6 +2,7 @@ import yfinance as yf
 import ta
 import numpy as np
 import pandas as pd
+import matplotlib.pyplot as plt
 
 def backtest_strategy(ticker_symbol, start_date, end_date, threshold_low, threshold_high, profit_target, stop_loss):
     # Télécharger les données historiques
@@ -51,35 +52,55 @@ def backtest_strategy(ticker_symbol, start_date, end_date, threshold_low, thresh
     returns = np.diff(portfolio_values)
     volatility = np.std(returns) if len(returns) > 0 else 0
 
-    # Calculer les métriques de performance
     total_return = sum(trades)
     win_rate = len([t for t in trades if t > 0]) / len(trades) if trades else 0
+    volatility = np.std(np.diff(portfolio_values)) if len(portfolio_values) > 1 else 0
 
+    # Assurez-vous que cette déclaration return est à la fin de la fonction
     return {
         "Total Return": total_return,
         "Win Rate": win_rate,
         "Number of Trades": len(trades),
         "Max Drawdown": max_drawdown,
         "Volatility": volatility
-    }
+    }, portfolio_values
 
 def backtest_multiple_stocks(ticker_symbols, start_date, end_date, stop_loss, take_profit):
     results = {}
     total_return_cumulative = 0
     max_drawdown_cumulative = 0
     volatility_cumulative = 0
+    portfolio_values_dict = {}
 
     for ticker_symbol in ticker_symbols:
-        result = backtest_strategy(ticker_symbol, start_date, end_date, 30, 70, take_profit, stop_loss)
+        result, portfolio_values = backtest_strategy(ticker_symbol, start_date, end_date, 30, 70, take_profit, stop_loss)
         results[ticker_symbol] = result
+        portfolio_values_dict[ticker_symbol] = portfolio_values
+
         total_return_cumulative += result["Total Return"]
         max_drawdown_cumulative = max(max_drawdown_cumulative, result["Max Drawdown"])
         volatility_cumulative += result["Volatility"]
+
+    plot_portfolio_values(portfolio_values_dict, stop_loss, take_profit)
 
     average_return = total_return_cumulative / len(ticker_symbols)
     average_volatility = volatility_cumulative / len(ticker_symbols)
 
     return results, total_return_cumulative, average_return, max_drawdown_cumulative, average_volatility
+
+def plot_portfolio_values(portfolio_values_dict, stop_loss, take_profit):
+    plt.figure(figsize=(10, 6))
+    for ticker, values in portfolio_values_dict.items():
+        plt.plot(values, label=f"{ticker} (SL: {stop_loss}, TP: {take_profit})")
+    
+    plt.title(f"Evolution de la Valeur du Portefeuille (Stop Loss: {stop_loss}, Take Profit: {take_profit})")
+    plt.xlabel("Temps")
+    plt.ylabel("Valeur du Portefeuille")
+    plt.legend()
+    plt.grid(True)
+    plt.savefig(f"backtest_{stop_loss}_{take_profit}.png")
+    plt.close()
+
 
 
 # Plages de paramètres pour l'optimisation
