@@ -1,0 +1,12 @@
+Stop Loss: 0.05, Take Profit: 0.05, Total Return: 4.327812324663767, Average Return: 0.6182589035233953, Max Drawdown: 13.530904189031073, Average Volatility: 0.053713236377268214
+Stop Loss: 0.05, Take Profit: 0.1, Total Return: 5.0607233010821835, Average Return: 0.7229604715831691, Max Drawdown: 5.0843270123354865, Average Volatility: 0.07818158678438267
+Stop Loss: 0.05, Take Profit: 0.15, Total Return: 6.3492623479064445, Average Return: 0.9070374782723493, Max Drawdown: 2.676403520233578, Average Volatility: 0.09784657078401215
+Stop Loss: 0.05, Take Profit: 0.2, Total Return: 6.144022345914502, Average Return: 0.877717477987786, Max Drawdown: 2.676403520233578, Average Volatility: 0.10390766620378199
+Stop Loss: 0.1, Take Profit: 0.05, Total Return: 4.3840536580596, Average Return: 0.6262933797228001, Max Drawdown: 3.887243820325402, Average Volatility: 0.06405137199947665
+Stop Loss: 0.1, Take Profit: 0.1, Total Return: 5.184912744088598, Average Return: 0.7407018205840854, Max Drawdown: 3.1139773743406325, Average Volatility: 0.09384867441004087
+Stop Loss: 0.1, Take Profit: 0.15, Total Return: 7.060680005777853, Average Return: 1.008668572253979, Max Drawdown: 3.1139773743406325, Average Volatility: 0.11536190904120873
+Stop Loss: 0.1, Take Profit: 0.2, Total Return: 7.49603451398445, Average Return: 1.07086207342635, Max Drawdown: 3.1139773743406325, Average Volatility: 0.1242494603282646
+Stop Loss: 0.15, Take Profit: 0.05, Total Return: 4.18632175843871, Average Return: 0.5980459654912442, Max Drawdown: 3.986360636976913, Average Volatility: 0.06979502853727813
+Stop Loss: 0.15, Take Profit: 0.1, Total Return: 4.482272703495863, Average Return: 0.6403246719279805, Max Drawdown: 2.3354830307554737, Average Volatility: 0.10570885272893536
+Stop Loss: 0.15, Take Profit: 0.15, Total Return: 5.38419732419211, Average Return: 0.7691710463131586, Max Drawdown: 2.3354830307554737, Average Volatility: 0.12976051710501615
+Stop Loss: 0.15, Take Profit: 0.2, Total Return: 5.8626780234117355, Average Return: 0.8375254319159622, Max Drawdown: 2.3354830307554737, Average Volatility: 0.13759335099223208
