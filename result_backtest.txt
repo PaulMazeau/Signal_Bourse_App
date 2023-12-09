@@ -26,3 +26,17 @@ Stop Loss: 0.15, Take Profit: 0.05, Total Return: 0.22542138995234595, Average R
 Stop Loss: 0.15, Take Profit: 0.1, Total Return: 0.3873348705805518, Average Return: 0.055333552940078835, Max Drawdown: 0, Average Volatility: 0.0018047885152188334
 Stop Loss: 0.15, Take Profit: 0.15, Total Return: 0.3735468697292287, Average Return: 0.053363838532746954, Max Drawdown: 0, Average Volatility: 0.0070244183726971
 Stop Loss: 0.15, Take Profit: 0.2, Total Return: 0.4834605154804237, Average Return: 0.06906578792577481, Max Drawdown: 0, Average Volatility: 0.011861317387286522
+
+##Result backtest Crypto ETH BTC AVA XRP
+Stop Loss: 0.05, Take Profit: 0.05, Total Return: 6.084071545627822, Average Return: 1.5210178864069555, Max Drawdown: 4.623041954252752, Average Volatility: 0.08887926162852597
+Stop Loss: 0.05, Take Profit: 0.1, Total Return: 5.943451798404563, Average Return: 1.4858629496011408, Max Drawdown: 0.9768970782583867, Average Volatility: 0.10606248981478186
+Stop Loss: 0.05, Take Profit: 0.15, Total Return: 6.91235699067714, Average Return: 1.728089247669285, Max Drawdown: 4.376357418623423, Average Volatility: 0.12398063251801263
+Stop Loss: 0.05, Take Profit: 0.2, Total Return: 7.512792088392535, Average Return: 1.8781980220981338, Max Drawdown: 3.7820110307428347, Average Volatility: 0.14918907962644415
+Stop Loss: 0.1, Take Profit: 0.05, Total Return: 5.448434782341276, Average Return: 1.362108695585319, Max Drawdown: 1.9485146974629135, Average Volatility: 0.10841601556263047
+Stop Loss: 0.1, Take Profit: 0.1, Total Return: 6.07981239806073, Average Return: 1.5199530995151824, Max Drawdown: 17.022366977703935, Average Volatility: 0.13206728203360762
+Stop Loss: 0.1, Take Profit: 0.15, Total Return: 6.739944455376271, Average Return: 1.6849861138440678, Max Drawdown: 2.415764024085658, Average Volatility: 0.1513474426435412
+Stop Loss: 0.1, Take Profit: 0.2, Total Return: 6.380692058929045, Average Return: 1.5951730147322611, Max Drawdown: 1.800750131636673, Average Volatility: 0.17568362786518854
+Stop Loss: 0.15, Take Profit: 0.05, Total Return: 4.651775791924854, Average Return: 1.1629439479812136, Max Drawdown: 5.665467093081974, Average Volatility: 0.11577126524388841
+Stop Loss: 0.15, Take Profit: 0.1, Total Return: 4.936243709712667, Average Return: 1.2340609274281666, Max Drawdown: 2.6078048640109093, Average Volatility: 0.14364272340740344
+Stop Loss: 0.15, Take Profit: 0.15, Total Return: 5.0810493178862615, Average Return: 1.2702623294715654, Max Drawdown: 1.6839229201270467, Average Volatility: 0.1709730076643958
+Stop Loss: 0.15, Take Profit: 0.2, Total Return: 4.636184688037349, Average Return: 1.1590461720093372, Max Drawdown: 3.576963388463541, Average Volatility: 0.19956269225132256

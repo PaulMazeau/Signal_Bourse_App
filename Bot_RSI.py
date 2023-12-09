@@ -17,7 +17,7 @@ def send_telegram_message(chat_id, token, message):
 
 def get_rsi(ticker_symbol, interval='1d', period=14):
     with lock:
-        stock_data = yf.download(ticker_symbol, interval=interval)
+        stock_data = yf.download(ticker_symbol, interval=interval, progress=False)
     rsi = ta.momentum.RSIIndicator(stock_data['Close'], window=period).rsi()
     return round(rsi.iloc[-1], 1)
 
